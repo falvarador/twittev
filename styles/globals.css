@@ -1,26 +1,29 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+/* Lime Light scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --primary: #c0ca33;
+  --primary-hover: #afb42b;
+  --primary-focus: rgba(192, 202, 51, 0.125);
+  --primary-inverse: rgba(0, 0, 0, 0.75);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+/* Lime Dark scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --primary: #c0ca33;
+    --primary-hover: #cddc39;
+    --primary-focus: rgba(192, 202, 51, 0.25);
+    --primary-inverse: rgba(0, 0, 0, 0.75);
   }
-  body {
-    color: white;
-    background: black;
-  }
+}
+
+/* Lime Dark scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme="dark"] {
+  --primary: #c0ca33;
+  --primary-hover: #cddc39;
+  --primary-focus: rgba(192, 202, 51, 0.25);
+  --primary-inverse: rgba(0, 0, 0, 0.75);
 }
