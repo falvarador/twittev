@@ -1,1 +1,1 @@
-A clone of twitter for <web developers/> 💻 🌎
+A clone of twitter for `<web developers/>` 💻 🌎
