@@ -1,29 +1,17 @@
-/* Lime Light scheme (Default) */
-/* Can be forced with data-theme="light" */
-[data-theme="light"],
-:root:not([data-theme="dark"]) {
-  --primary: #c0ca33;
-  --primary-hover: #afb42b;
-  --primary-focus: rgba(192, 202, 51, 0.125);
-  --primary-inverse: rgba(0, 0, 0, 0.75);
+article {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .1);
 }
 
-/* Lime Dark scheme (Auto) */
-/* Automatically enabled if user has Dark mode enabled */
-@media only screen and (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --primary: #c0ca33;
-    --primary-hover: #cddc39;
-    --primary-focus: rgba(192, 202, 51, 0.25);
-    --primary-inverse: rgba(0, 0, 0, 0.75);
+.flex {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 576px) {
+  .container {
+    height: 90vh;
+    width: 576px;
   }
-}
-
-/* Lime Dark scheme (Forced) */
-/* Enabled if forced with data-theme="dark" */
-[data-theme="dark"] {
-  --primary: #c0ca33;
-  --primary-hover: #cddc39;
-  --primary-focus: rgba(192, 202, 51, 0.25);
-  --primary-inverse: rgba(0, 0, 0, 0.75);
 }

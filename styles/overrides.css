@@ -1,0 +1,52 @@
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+    --primary: var(var(--main-bg-color));
+    --primary-hover: #0288d1;
+    --primary-focus: rgba(3, 155, 229, 0.125);
+    --primary-inverse: var(--light-bg-color);
+
+    background-image:
+        radial-gradient(var(--main-bg-color) 1px, var(--light-bg-color) 1px),
+        radial-gradient(var(--main-bg-color) 1px, var(--light-bg-color) 1px);
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --primary: var(var(--main-bg-color));
+        --primary-hover: #03a9f4;
+        --primary-focus: rgba(3, 155, 229, 0.25);
+        --primary-inverse: var(--light-bg-color);
+
+        background-image:
+            radial-gradient(var(--light-bg-color) 1px, var(--dark-bg-color) 1px),
+            radial-gradient(var(--light-bg-color) 1px, var(--dark-bg-color) 1px);
+    }
+}
+
+[data-theme="dark"] {
+    --primary: var(var(--main-bg-color));
+    --primary-hover: #03a9f4;
+    --primary-focus: rgba(3, 155, 229, 0.25);
+    --primary-inverse: var(--light-bg-color);
+
+    background-image:
+        radial-gradient(var(--light-bg-color) 1px, var(--dark-bg-color) 1px),
+        radial-gradient(var(--light-bg-color) 1px, var(--dark-bg-color) 1px);
+}
+
+:root {
+    --main-bg-color: #039be5;
+    --light-bg-color: #fdfdfd;
+    --dark-bg-color: #11191f;
+
+    --form-element-active-border-color: var(--primary);
+    --form-element-focus-color: var(--primary-focus);
+    --switch-color: var(--primary-inverse);
+    --switch-checked-background-color: var(--primary);
+
+    background-position: 0 0, 25px 25px;
+    background-repeat: repeat;
+    background-size: 50px 50px;
+    margin: 0;
+    padding: 0;
+}

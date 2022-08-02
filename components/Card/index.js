@@ -3,8 +3,8 @@ export default function Card ({ url, title, description }) {
     <article>
       <a href={url}>
         <h2>{title}</h2>
-        <p>{description}</p>
       </a>
+      <p>{description}</p>
     </article>
   )
 }

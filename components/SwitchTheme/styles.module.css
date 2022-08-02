@@ -1,0 +1,7 @@
+.switch {
+  display: flex;
+}
+
+.switch>label {
+  margin-left: 1rem;
+}
