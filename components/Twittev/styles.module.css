@@ -1,0 +1,14 @@
+.twittev {
+    border-bottom: 2px solid #eaf7ff;
+    display: flex;
+    padding: 10px 15px;
+}
+
+.twittev>div {
+    padding-right: 10px;
+}
+
+.twittev>p {
+    line-height: 1.3125;
+    margin: 0;
+}

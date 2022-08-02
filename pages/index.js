@@ -1,10 +1,12 @@
 import { loginWithGitHub, authStateChanged } from '../firebase/client'
+
 import { useEffect, useState } from 'react'
-import Avatar from '../components/Avatar'
-import Button from '../components/Button'
-import GitHub from '../components/Icons/GitHub'
 import Head from 'next/head'
-import Layout from '../components/Layout'
+
+import Avatar from 'components/Avatar'
+import Button from 'components/Button'
+import GitHub from 'components/Icons/GitHub'
+import Layout from 'components/Layout'
 
 export default function Home () {
   const [user, setUser] = useState(undefined)
@@ -34,7 +36,7 @@ export default function Home () {
             {
               user === null &&
               <Button onClick={handleClick}>
-              <GitHub fill='var(--light-bg-color)' width={24} height={24} />
+              <GitHub width={24} height={24} />
                 Login with GitHub
               </Button>
             }

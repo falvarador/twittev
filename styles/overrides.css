@@ -1,9 +1,10 @@
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
-    --primary: var(var(--main-bg-color));
-    --primary-hover: #0288d1;
+    --fill-svg-icon: var(--light-bg-color);
     --primary-focus: rgba(3, 155, 229, 0.125);
+    --primary-hover: #0288d1;
     --primary-inverse: var(--light-bg-color);
+    --primary: var(var(--main-bg-color));
 
     background-image:
         radial-gradient(var(--main-bg-color) 1px, var(--light-bg-color) 1px),
@@ -12,10 +13,11 @@
 
 @media only screen and (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-        --primary: var(var(--main-bg-color));
-        --primary-hover: #03a9f4;
+        --fill-svg-icon: var(--dark-bg-color);
         --primary-focus: rgba(3, 155, 229, 0.25);
+        --primary-hover: #03a9f4;
         --primary-inverse: var(--light-bg-color);
+        --primary: var(var(--main-bg-color));
 
         background-image:
             radial-gradient(var(--light-bg-color) 1px, var(--dark-bg-color) 1px),
@@ -24,10 +26,11 @@
 }
 
 [data-theme="dark"] {
-    --primary: var(var(--main-bg-color));
-    --primary-hover: #03a9f4;
+    --fill-svg-icon: var(--dark-bg-color);
     --primary-focus: rgba(3, 155, 229, 0.25);
+    --primary-hover: #03a9f4;
     --primary-inverse: var(--light-bg-color);
+    --primary: var(var(--main-bg-color));
 
     background-image:
         radial-gradient(var(--light-bg-color) 1px, var(--dark-bg-color) 1px),
@@ -35,9 +38,10 @@
 }
 
 :root {
-    --main-bg-color: #039be5;
-    --light-bg-color: #fdfdfd;
     --dark-bg-color: #11191f;
+    --fill-svg-icon: var(var(--light-bg-color));
+    --light-bg-color: #fdfdfd;
+    --main-bg-color: #039be5;
 
     --form-element-active-border-color: var(--primary);
     --form-element-focus-color: var(--primary-focus);

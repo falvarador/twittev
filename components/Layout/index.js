@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import SwitchTheme from '../SwitchTheme'
+import SwitchTheme from 'components/SwitchTheme'
 
 export default function Layout ({ children }) {
   return (

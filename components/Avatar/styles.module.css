@@ -2,6 +2,7 @@
     border-radius: 2rem;
     height: 3.25rem;
     width: 3.25rem;
+    object-fit: cover;
 }
 
 .avatar+strong {
